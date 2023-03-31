@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dimens -->
+    <dimen name="tv_app_text_size">23sp</dimen>
+    <dimen name="tv_des_text_size">15sp</dimen>
+    <dimen name="tv_app_name_margin_top">46dp</dimen>
+    <dimen name="tv_des_margin_top">14dp</dimen>
+
+    <dimen name="lav_splash_padding">5dp</dimen>
+    <dimen name="last_item_margin_bottom">80dp</dimen>
+    <dimen name="chat_bar_height">61dp</dimen>
+    <dimen name="iv_back_margin_start">20dp</dimen>
+    <dimen name="icon_margin_end">5dp</dimen>
+    <dimen name="tv_name_tx_size">20sp</dimen>
+    <dimen name="iv_mode">26dp</dimen>
+    <dimen name="iv_mode_margin">20dp</dimen>
+    <dimen name="tv_intro">30dp</dimen>
+    <dimen name="tv_intro_tx_size">16sp</dimen>
+    <dimen name="rl_send_margin">21dp</dimen>
+    <dimen name="rl_send">32dp</dimen>
+    <dimen name="et_text">16dp</dimen>
+    <dimen name="et_text_end">48dp</dimen>
+    <dimen name="et_text_size">13sp</dimen>
+    <dimen name="tv_send">24dp</dimen>
+    <dimen name="tv_send_end">16dp</dimen>
+    <dimen name="btn_continue">54dp</dimen>
+    <dimen name="btn_continue_bottom">35dp</dimen>
+    <dimen name="btn_continue_start">20dp</dimen>
+    <dimen name="btn_continue_tx_size">16sp</dimen>
+</resources>

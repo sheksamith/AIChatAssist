@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+
+    <TextView
+        android:id="@+id/tv_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MainActivityText"
+        android:layout_marginTop="@dimen/tv_app_name_margin_top"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/noto_sans_bold"
+        android:text="@string/app_name"
+        android:textSize="@dimen/tv_app_text_size" />
+
+    <TextView
+        android:id="@+id/tv_app_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MainActivityText"
+        android:layout_marginTop="@dimen/tv_des_margin_top"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv_app_name"
+        android:fontFamily="@font/noto_sans"
+        android:textAlignment="center"
+        android:text="@string/app_des"
+        android:textSize="@dimen/tv_des_text_size" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lavSplash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:lottie_rawRes="@raw/ai"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+
+    <Button
+        android:id="@+id/btn_continue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_continue"
+        style="@style/ButtonContinue"
+        android:layout_marginBottom="@dimen/btn_continue_bottom"
+        android:layout_marginStart="@dimen/btn_continue_start"
+        android:layout_marginEnd="@dimen/btn_continue_start"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Continue"
+        android:textSize="@dimen/btn_continue_tx_size"
+        android:fontFamily="@font/noto_sans_bold"
+        android:background="@drawable/btn_continue_bg"/>
+</RelativeLayout>

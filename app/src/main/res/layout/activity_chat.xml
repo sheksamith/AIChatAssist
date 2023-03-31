@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/ChatActivity"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ChatActivity">
+
+    <RelativeLayout
+        android:id="@+id/chat_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/chat_bar_height"
+        style="@style/ChatBar"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/iv_back_margin_start"
+            style="@style/BackImage"/>
+
+        <ImageView
+            style="@style/BotIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/tv_name"
+            android:layout_marginEnd="@dimen/icon_margin_end"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/ChatBarText"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/noto_sans_bold"
+            android:textSize="@dimen/tv_name_tx_size"
+            android:text="@string/app_name"/>
+
+        <ImageView
+            android:id="@+id/iv_mode"
+            style="@style/ChatBarMode"
+            android:layout_width="@dimen/iv_mode"
+            android:layout_height="@dimen/iv_mode"
+            android:layout_marginEnd="@dimen/iv_mode_margin"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toStartOf="@+id/tv_name" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            style="@style/ChatBarLine"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvChats"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/chat_bar"
+        android:scrollbars="vertical"
+        android:layout_above="@+id/rl_send"/>
+
+    <TextView
+        android:id="@+id/tv_intro"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/ChatBarText"
+        android:layout_marginTop="@dimen/tv_intro"
+        android:layout_marginStart="@dimen/tv_intro"
+        android:layout_marginEnd="@dimen/tv_intro"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/tv_intro_tx_size"
+        android:text="@string/start"
+        android:layout_below="@id/chat_bar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_rl_send"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/rl_send_margin"
+        android:layout_marginEnd="@dimen/rl_send_margin"
+        android:layout_marginBottom="@dimen/rl_send">
+
+        <EditText
+            android:id="@+id/et_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:paddingTop="@dimen/et_text"
+            android:paddingBottom="@dimen/et_text"
+            android:paddingStart="@dimen/et_text"
+            android:paddingEnd="@dimen/et_text_end"
+            android:background="@null"
+            android:inputType="text|textMultiLine|textCapSentences|textAutoCorrect|textAutoComplete"
+            android:textAlignment="viewStart"
+            android:hint="@string/hint"
+            android:textColorHint="@color/black_10"
+            android:textColor="@color/black"
+            android:fontFamily="@font/noto_sans"
+            android:textSize="@dimen/et_text_size" />
+
+        <ImageView
+            android:id="@+id/iv_send"
+            android:layout_width="@dimen/tv_send"
+            android:layout_height="@dimen/tv_send"
+            android:layout_marginEnd="@dimen/tv_send_end"
+            android:src="@drawable/ic_send_icon"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
