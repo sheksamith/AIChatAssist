@@ -138,8 +138,8 @@ class ChatActivity : AppCompatActivity() {
             val enable: Boolean =
                 openAIClient!!.getModel().equals(OpenAIClient.GPT_3_5_TURBO)
             openAIClient!!.setMaxTokensEnabled(enable)
-            openAIClient!!.setMaxTokens(Constants.MAX_TOKENS.toDouble())
-            openAIClient!!.setTemperature(Constants.TEMPERATURE.toDouble())
+            openAIClient!!.setMaxTokens(prefs.getInt("maxtokens",150).toDouble())
+            openAIClient!!.setTemperature(prefs.getString("temperature","0")!!.toDouble())
     }
 
     // Send user input to OpenAI API and update UI with response

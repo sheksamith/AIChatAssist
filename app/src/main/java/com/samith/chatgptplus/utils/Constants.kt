@@ -14,12 +14,6 @@ class Constants {
         // Model to use for generating text
         const val MODEL = "gpt-3.5-turbo"
 
-        // Temperature parameter for text generation
-        const val TEMPERATURE = 0
-
-        // Max tokens parameter for text generation
-        const val MAX_TOKENS = 150
-
         // Type of the chat message - user or AI
         const val TYPE_USER = 1
         const val TYPE_AI = 0

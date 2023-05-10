@@ -6,4 +6,6 @@
     <string name="hint">Enter Your Message</string>
     <string name="title_activity_settings">Settings</string>
     <string name="title_key">API-Key</string>
+    <string name="title_temperature">Temperature</string>
+    <string name="title_maxtokens">Maximum number of tokens</string>
 </resources>
