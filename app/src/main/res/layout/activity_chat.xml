@@ -9,52 +9,62 @@
 
     <RelativeLayout
         android:id="@+id/chat_bar"
+        style="@style/ChatBar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/chat_bar_height"
-        style="@style/ChatBar"
         android:layout_alignParentTop="true">
 
         <ImageView
             android:id="@+id/iv_back"
+            style="@style/BackImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginStart="@dimen/iv_back_margin_start"
-            style="@style/BackImage"/>
+            android:layout_marginStart="@dimen/iv_back_margin_start" />
 
         <ImageView
             style="@style/BotIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toStartOf="@+id/tv_name"
-            android:layout_marginEnd="@dimen/icon_margin_end"/>
+            android:layout_marginEnd="@dimen/icon_margin_end"
+            android:layout_toStartOf="@+id/tv_name" />
 
         <TextView
             android:id="@+id/tv_name"
+            style="@style/ChatBarText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/ChatBarText"
             android:layout_centerInParent="true"
             android:fontFamily="@font/noto_sans_bold"
-            android:textSize="@dimen/tv_name_tx_size"
-            android:text="@string/app_name"/>
+            android:text="@string/app_name"
+            android:textSize="@dimen/tv_name_tx_size" />
 
         <ImageView
             android:id="@+id/iv_mode"
             style="@style/ChatBarMode"
             android:layout_width="@dimen/iv_mode"
             android:layout_height="@dimen/iv_mode"
-            android:layout_marginEnd="@dimen/iv_mode_margin"
             android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/iv_mode_margin"
+            android:layout_toStartOf="@+id/iv_settings" />
+
+        <ImageView
+            android:id="@+id/iv_settings"
+            style="@style/ChatSettings"
+            android:layout_width="@dimen/iv_mode"
+            android:layout_height="@dimen/iv_mode"
             android:layout_alignParentEnd="true"
-            android:layout_toStartOf="@+id/tv_name" />
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/iv_mode_margin"
+            android:layout_toStartOf="@+id/tv_name"
+            android:onClick="startSettings" />
 
         <View
+            style="@style/ChatBarLine"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            style="@style/ChatBarLine"
-            android:layout_alignParentBottom="true"/>
+            android:layout_alignParentBottom="true" />
     </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView

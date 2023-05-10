@@ -7,8 +7,6 @@ package com.samith.chatgptplus.utils
  */
 class Constants {
     companion object {
-        // API Key for OpenAI API
-        const val API_KEY: String = "your_api_key"
 
         // Base URL for OpenAI API
         const val BASE_URL = "https://api.openai.com/v1/chat/completions"

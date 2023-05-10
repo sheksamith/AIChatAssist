@@ -1,6 +1,7 @@
 package com.samith.chatgptplus.activities
 
 import android.content.Context
+import android.content.Intent
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
@@ -10,6 +11,7 @@ import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.samith.chatgptplus.adapters.MessageAdapter
 import com.samith.chatgptplus.clients.OpenAIClient
@@ -128,10 +130,11 @@ class ChatActivity : AppCompatActivity() {
 
     // Set up OpenAI client with API key and model parameters
     private fun setupOpenAI() {
+        val prefs = getDefaultSharedPreferences(this);
             openAIClient = OpenAIClient()
             openAIClient!!.setModel(Constants.MODEL)
             openAIClient!!.setApiUrl(Constants.BASE_URL)
-            openAIClient!!.setApiKey(Constants.API_KEY)
+            openAIClient!!.setApiKey(prefs.getString("apikey",""))
             val enable: Boolean =
                 openAIClient!!.getModel().equals(OpenAIClient.GPT_3_5_TURBO)
             openAIClient!!.setMaxTokensEnabled(enable)
@@ -257,4 +260,8 @@ class ChatActivity : AppCompatActivity() {
         }
     }
 
+    fun startSettings(view: View) {
+        val intent = Intent(this, SettingsActivity::class.java)
+        startActivity(intent)
+    }
 }
