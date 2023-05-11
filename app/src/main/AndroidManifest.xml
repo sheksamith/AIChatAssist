@@ -17,6 +17,11 @@
         android:configChanges="uiMode"
         tools:targetApi="31">
         <activity
+            android:name="com.samith.chatgptplus.activities.SettingsActivity"
+            android:parentActivityName="com.samith.chatgptplus.activities.ChatActivity"
+            android:exported="false"
+            android:label="@string/title_activity_settings" />
+        <activity
             android:name=".activities.ChatActivity"
             android:screenOrientation="portrait"
             android:exported="false">
