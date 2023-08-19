@@ -4,4 +4,8 @@
     <string name="app_des">By using this AI ChatAssist app, you can tap into the knowledge of an AI assistant to ask questions and receive accurate answers.</string>
     <string name="start">Ready to get started? Our AI is waiting to provide you with answers - just type your question and send it over.</string>
     <string name="hint">Enter Your Message</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_key">API-Key</string>
+    <string name="title_temperature">Temperature</string>
+    <string name="title_maxtokens">Maximum number of tokens</string>
 </resources>

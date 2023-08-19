@@ -1,0 +1,29 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="Chat GPT Settings">
+
+        <EditTextPreference
+            app:key="apikey"
+            app:defaultValue=""
+            app:title="@string/title_key"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="temperature"
+            app:defaultValue="0"
+            android:inputType="number"
+            app:title="@string/title_temperature"
+            app:useSimpleSummaryProvider="true" />
+
+        <SeekBarPreference
+            app:key="maxtokens"
+            app:defaultValue="150"
+            app:title="@string/title_maxtokens"
+            app:showSeekBarValue="true"
+            android:max="2000"
+            />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
